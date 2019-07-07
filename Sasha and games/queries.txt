@@ -1,8 +1,8 @@
 SELECT name,year FROM `games` WHERE ID NOT IN (SELECT GameId FROM `reviews`) 
 
-SELECT Games.Name from Games JOIN reviews ON Games.ID=reviews.GameID JOIN games_genres ON Games.ID=games_genres.GameID JOIN genres ON games_genres.GenreID=genres.ID WHERE genres.Name="Õ¿«¬¿Õ»≈ ∆¿Õ–¿" ORDER BY reviews.Rating DESC LIMIT 3 
+SELECT Games.Name from Games JOIN reviews ON Games.ID=reviews.GameID JOIN games_genres ON Games.ID=games_genres.GameID JOIN genres ON games_genres.GenreID=genres.ID WHERE genres.Name="GENRE NAME" ORDER BY reviews.Rating DESC LIMIT 3 
 
-SELECT series.Name, COUNT(games.ID) FROM `games` JOIN series ON games.SeriesID=series.ID WHERE seriesID IN (SELECT series.ID FROM `series` JOIN publishers ON series.PublisherID=publishers.ID WHERE publishers.Name='Õ¿«¬¿Õ»≈ »«ƒ¿“≈Àﬂ') 
+SELECT series.Name, COUNT(games.ID) FROM `games` JOIN series ON games.SeriesID=series.ID WHERE seriesID IN (SELECT series.ID FROM `series` JOIN publishers ON series.PublisherID=publishers.ID WHERE publishers.Name='PUBLISHER NAME') 
 
 
 
